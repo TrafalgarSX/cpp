@@ -1,0 +1,79 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "hidden": true,
+            "name": "Qt",
+            "cacheVariables": {
+                "CMAKE_PREFIX_PATH": "$env{QTDIR}"
+            }
+        },
+        {
+            "name": "vs2019-64-presets",
+            "displayName": "Qt-vs2019-x64",
+            "description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "v142",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        },
+        {
+            "name": "vs2022-v64-ninja-presets",
+            "displayName": "VS-amd64-ninja",
+            "description": "ninja-Using compilers for Visual Studio 17 2022 (x64 architecture)",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+                "CMAKE_TOOLCHAIN_FILE": "D:/workspace/dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "vs2022",
+            "displayName": "Visual Studio Community 2022 Release - amd64",
+            "description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_TOOLCHAIN_FILE": "D:/workspace/dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vs2022-64-presets-debug",
+            "displayName": "Qt-vs2019-x64 - Debug",
+            "configurePreset": "vs2019-64-presets",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs2022-v64-ninja-presets-debug",
+            "displayName": "VS-amd64-ninja-Debug",
+            "configurePreset": "vs2022-v64-ninja-presets",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs2022-64-presets-release",
+            "displayName": "VS-amd64-ninja-Release",
+            "configurePreset": "vs2022-v64-ninja-presets",
+            "configuration": "Release"
+        },
+        {
+            "name": "vs2022-64",
+            "displayName": "VS-amd64-Debug",
+            "configurePreset": "vs2022",
+            "configuration": "Debug"
+        }
+    ]
+}

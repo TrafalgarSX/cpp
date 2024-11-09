@@ -1,0 +1,18 @@
+# ninja log v5
+2	350	7508550116647997	CMakeFiles/impl-Debug.ninja	a873f56e29d4812
+2	350	7508550116688026	build-Release.ninja	a873f56e29d4812
+2	350	7508550116582870	build.ninja	a873f56e29d4812
+2	350	7508550116658010	build-Debug.ninja	a873f56e29d4812
+2	350	7508550116697984	build-RelWithDebInfo.ninja	a873f56e29d4812
+4	1760	7506895621259228	CMakeFiles/zhcosign.dir/Debug/src/etcryptmedia_module.cpp.obj	b4e44e8192cc796b
+2	350	7508550116668024	CMakeFiles/impl-Release.ninja	a873f56e29d4812
+2	350	7508550116688026	CMakeFiles/impl-RelWithDebInfo.ninja	a873f56e29d4812
+4	2887	7507660153400417	CMakeFiles/zhcosign.dir/Debug/src/EtZHCosignTest.cpp.obj	82af19441322777a
+2887	3258	7507660157058338	Debug/zhcosign.exe	ae27d0cefbff8777
+19	2420	7508550146210267	CMakeFiles/zhcosign.dir/Debug/src/etcryptmedia_module.cpp.obj	b4e44e8192cc796b
+3	1141	7508552097810780	CMakeFiles/zhcosign.dir/Debug/src/EtZHCosignTest.cpp.obj	82af19441322777a
+1142	1456	7508552100912485	Debug/zhcosign.exe	ae27d0cefbff8777
+3	942	7508552671493145	CMakeFiles/zhcosign.dir/Debug/src/EtZHCosignTest.cpp.obj	82af19441322777a
+943	1091	7508552672925511	Debug/zhcosign.exe	ae27d0cefbff8777
+3	995	7508553187914283	CMakeFiles/zhcosign.dir/Debug/src/EtZHCosignTest.cpp.obj	82af19441322777a
+996	1140	7508553189334631	Debug/zhcosign.exe	ae27d0cefbff8777

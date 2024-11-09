@@ -1,0 +1,77 @@
+;
+; processProc.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System ; TODO: specify appropriate Class
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=processProc.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+processProc_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+processProc.sys  = 1,,
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%processProc.DeviceDesc%=processProc_Device, Root\processProc ; TODO: edit hw-id
+
+[processProc_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+processProc.sys
+
+;-------------- Service installation
+[processProc_Device.NT.Services]
+AddService = processProc,%SPSVCINST_ASSOCSERVICE%, processProc_Service_Inst
+
+; -------------- processProc driver install sections
+[processProc_Service_Inst]
+DisplayName    = %processProc.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\processProc.sys
+
+;
+;--- processProc_Device Coinstaller installation ------
+;
+
+[processProc_Device.NT.CoInstallers]
+AddReg=processProc_Device_CoInstaller_AddReg
+CopyFiles=processProc_Device_CoInstaller_CopyFiles
+
+[processProc_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[processProc_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[processProc_Device.NT.Wdf]
+KmdfService =  processProc, processProc_wdfsect
+[processProc_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "processProc Installation Disk"
+processProc.DeviceDesc = "processProc Device"
+processProc.SVCDESC = "processProc Service"

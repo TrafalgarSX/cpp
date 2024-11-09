@@ -1,0 +1,6 @@
+# ninja log v5
+16	827	7435358343754740	CMakeFiles/testdll.dir/src/testsingle.cpp.obj	c8eabfb03ea43a9c
+11	875	7435358344225295	CMakeFiles/staticlib.dir/src/staticlib.cpp.obj	66de41856a67f074
+1	943	7435358344901060	CMakeFiles/dll.dir/src/dll.cpp.obj	e744cbc62dbb1c6
+875	977	7435358345246347	libstaticlib.a	ad9caa564e6e7fa2
+6	1016	7435358345636787	CMakeFiles/testdll.dir/src/main.cpp.obj	5d0bfa496ff2f74e

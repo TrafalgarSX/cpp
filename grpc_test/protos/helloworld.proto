@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+// proto package name
+package HelloWorld;
+
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    message TransferBytesReq {
+        bytes data = 1;
+    }
+    TransferBytesReq transferBytesReq = 1;
+    string name = 2;
+}
+
+message HelloReply {
+    message TransferBytesResp {
+        bytes data = 1;
+    }
+
+    TransferBytesResp transferBytesResp = 1;
+    string message = 2;
+}
+
+
+
+
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TearClass", "TearClass.vcxproj", "{11004A4B-42EB-4963-8A25-621007C06582}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11004A4B-42EB-4963-8A25-621007C06582}.Debug|x64.ActiveCfg = Debug|x64
+		{11004A4B-42EB-4963-8A25-621007C06582}.Debug|x64.Build.0 = Debug|x64
+		{11004A4B-42EB-4963-8A25-621007C06582}.Debug|x86.ActiveCfg = Debug|Win32
+		{11004A4B-42EB-4963-8A25-621007C06582}.Debug|x86.Build.0 = Debug|Win32
+		{11004A4B-42EB-4963-8A25-621007C06582}.Release|x64.ActiveCfg = Release|x64
+		{11004A4B-42EB-4963-8A25-621007C06582}.Release|x64.Build.0 = Release|x64
+		{11004A4B-42EB-4963-8A25-621007C06582}.Release|x86.ActiveCfg = Release|Win32
+		{11004A4B-42EB-4963-8A25-621007C06582}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9CB721F-96CF-4398-A6E1-08636E9D81B2}
+	EndGlobalSection
+EndGlobal

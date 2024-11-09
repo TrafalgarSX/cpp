@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "testdll",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dll::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dll-Debug-1601a1eec938ca1b12bf.json",
+					"name" : "dll",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "staticlib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-staticlib-Debug-4e99af8b748228ae77ac.json",
+					"name" : "staticlib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "testdll::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testdll-Debug-e1f6d3a0182c2a012b3d.json",
+					"name" : "testdll",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/workspace/cpp/testdll/mingw11.2-x86_64",
+		"source" : "D:/workspace/cpp/testdll"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
